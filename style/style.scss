@@ -1,0 +1,58 @@
+@import "normalize";
+@import "fonts";
+@import "header";
+@import "hero";
+@import "order-from";
+@import "footer";
+
+:root {
+  --container: 1170px;
+  --color-light: #ffffff;
+  --color-dark: #000000;
+  --color-very-dark: #272733;
+  --color-gray: rgba(255, 255, 255, 0.85);
+  --color-havelock-blue: #3e9cdc;
+  --offset: 80px;
+  --small-offset: 40px;
+  --transition: color 0.3s ease-in-out;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.page {
+  overflow-x: hidden;
+}
+
+.stop-scroll {
+  overflow: hidden;
+}

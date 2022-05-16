@@ -1,0 +1,112 @@
+.wrapper {
+  padding-top: calc(103px + var(--header-height));
+
+  @media (max-width: (425px)) {
+    padding-top: calc(40px + var(--header-height));
+  }
+}
+
+.hero {
+  background-color: #cccccc;
+  background-image: url(../img/hero_banner.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  min-height: 850px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    text-transform: uppercase;
+    max-width: 780px;
+    margin-bottom: var(--offset);
+    color: var(--color-dark);
+
+    @media (max-width: (768px)) {
+      font-size: 38px;
+      line-height: 42px;
+    }
+
+    @media (max-width: (425px)) {
+      font-size: 28px;
+      line-height: 42px;
+      margin-bottom: var(--small-offset);
+    }
+  }
+
+  &__buttons {
+    @media (max-width: (425px)) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__button {
+    background-color: var(--color-havelock-blue);
+    border: 1px solid var(--color-light);
+    border-radius: 4px;
+    padding: 15px 10px;
+    min-width: 183px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: var(--color-light);
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__button:not(:last-child) {
+    margin-right: 30px;
+
+    @media (max-width: (425px)) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__button--right {
+    background-color: var(--color-light);
+    border: 1px solid #6f6d7b;
+    color: #2a2b30;
+  }
+
+  &__button--right:hover {
+    background-color: #3d4050;
+    border: 1px solid var(--color-light);
+    color: var(--color-light);
+  }
+
+  &__button--left:hover {
+    background-color: #3d4050;
+    border: 1px solid #6f6d7b;
+  }
+}
+
+.list {
+  margin-bottom: var(--offset);
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--color-dark);
+    margin-bottom: 10px;
+  }
+
+  &__item {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--color-dark);
+    list-style-type: "- ";
+    margin: 0 0 5px 15px;
+  }
+
+  @media (max-width: (425px)) {
+    margin-bottom: var(--small-offset);
+  }
+}
