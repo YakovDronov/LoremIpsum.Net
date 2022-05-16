@@ -46,8 +46,16 @@ let listSelect = document.querySelector(".form__select-list");
 let itemSelect = listSelect.querySelectorAll(".form__select-item");
 let inputSelect = document.querySelector(".form__select-input");
 
+let selectHeight = () => {
+  let btnSelectHeight = btnSelect.offsetHeight;
+  document
+    .querySelector(":root")
+    .style.setProperty("--btn-select-height", `${btnSelectHeight}px`);
+};
+
 btnSelect.addEventListener("click", () => {
   listSelect.classList.toggle("form__select-list--active");
+  selectHeight();
   if (listSelect.contains) {
     btnSelect.classList.toggle("form__select--active");
   }

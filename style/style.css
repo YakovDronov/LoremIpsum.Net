@@ -484,19 +484,18 @@ template {
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 525px) {
   .hero__buttons {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -519,7 +518,7 @@ template {
   margin-right: 30px;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 525px) {
   .hero__button:not(:last-child) {
     margin-right: 0;
     margin-bottom: 20px;
@@ -760,7 +759,7 @@ template {
 
 .form__select-dropdown {
   position: relative;
-  min-width: 300px;
+  min-width: 290px;
 }
 
 .form__select-custom {
@@ -805,7 +804,7 @@ template {
   display: none;
   position: absolute;
   z-index: 1;
-  top: 48px;
+  top: var(--btn-select-height);
   left: 0;
   width: 100%;
   height: 180px;
@@ -870,7 +869,9 @@ template {
   font-size: 18px;
   line-height: 22px;
   color: rgba(255, 255, 255, 0.85);
-  margin-left: 21px;
+  margin-left: 15px;
+  min-width: 46px;
+  text-align: end;
 }
 
 .form__range {
@@ -920,15 +921,19 @@ template {
   border-radius: 3px;
   text-align: center;
   cursor: pointer;
+  overflow-wrap: anywhere;
+  padding: 12px 10px;
 }
 
 .form__input-text {
   position: relative;
+  display: inline-block;
   font-weight: 600;
   font-size: 15px;
   line-height: 18px;
   text-transform: uppercase;
   color: var(--color-very-dark);
+  padding-left: 28px;
 }
 
 .form__input-text::before {
@@ -938,7 +943,7 @@ template {
   width: 18px;
   height: 20px;
   top: calc(50% - 11px);
-  left: -20px;
+  left: 10px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   background-image: url(../img/file.svg);

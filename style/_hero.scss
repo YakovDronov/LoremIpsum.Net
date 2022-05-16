@@ -37,11 +37,10 @@
   }
 
   &__buttons {
-    @media (max-width: (425px)) {
+    @media (max-width: (525px)) {
       display: flex;
-      align-items: center;
       justify-content: flex-start;
-      flex-wrap: wrap;
+      flex-direction: column;
     }
   }
 
@@ -62,7 +61,7 @@
   &__button:not(:last-child) {
     margin-right: 30px;
 
-    @media (max-width: (425px)) {
+    @media (max-width: (525px)) {
       margin-right: 0;
       margin-bottom: 20px;
     }
